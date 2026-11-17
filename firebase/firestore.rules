@@ -1,0 +1,21 @@
+rules_version = '2';
+// STARTER RULES - Member A must replace with role-based family rules in Sprint 7
+// and test them in the emulator (firebase/tests). Default = deny everything
+// except a signed-in user reading/writing their own user document.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+
+    match /users/{uid} {
+      allow read, write: if signedIn() && request.auth.uid == uid;
+    }
+
+    // TODO(A, S7): families/{fid}, members, profiles, medicines, schedules,
+    // doseLogs (append-only), invites (Cloud Function only), insights.
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
