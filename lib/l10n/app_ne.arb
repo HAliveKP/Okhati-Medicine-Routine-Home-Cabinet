@@ -1,0 +1,16 @@
+{
+  "@@locale": "ne",
+  "appName": "ओखती",
+  "tabToday": "आज",
+  "tabCabinet": "औषधि दराज",
+  "tabFamily": "परिवार",
+  "tabMore": "थप",
+  "statusGood": "ठीक",
+  "statusDue": "समय भयो",
+  "statusLowStock": "कम बाँकी",
+  "statusExpiring": "म्याद सकिँदै",
+  "statusExpired": "म्याद सकियो",
+  "actionTaken": "खाएँ",
+  "actionSnooze": "पछि सम्झाउनुहोस्",
+  "aiDisclaimer": "एआईले गल्ती गर्न सक्छ। यो एपले चिकित्सकीय सल्लाह दिँदैन।"
+}

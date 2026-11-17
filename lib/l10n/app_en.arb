@@ -1,0 +1,16 @@
+{
+  "@@locale": "en",
+  "appName": "Okhati",
+  "tabToday": "Today",
+  "tabCabinet": "Cabinet",
+  "tabFamily": "Family",
+  "tabMore": "More",
+  "statusGood": "Good",
+  "statusDue": "Due",
+  "statusLowStock": "Low stock",
+  "statusExpiring": "Expiring",
+  "statusExpired": "Expired",
+  "actionTaken": "Taken",
+  "actionSnooze": "Snooze",
+  "aiDisclaimer": "AI can make mistakes. This app does not give medical advice."
+}
