@@ -6,7 +6,8 @@ import '../domain/models/medicine_status.dart';
 import '../domain/repositories/medicine_repository.dart';
 
 /// In-memory mock repository. Swap for Firebase later via one provider change.
-class MockMedicineRepository implements MedicineRepository {
+class MockMedicineRepository
+    implements MedicineRepository, SimilarMedicineSearchRepository {
   MockMedicineRepository(this._clock)
     : _medicines = <String, Medicine>{},
       _controller = StreamController<List<Medicine>>.broadcast();
@@ -37,6 +38,26 @@ class MockMedicineRepository implements MedicineRepository {
   Future<Medicine?> getMedicine(String id) async => _medicines[id];
 
   @override
+  Future<List<Medicine>> findSimilarMedicines({
+    required String name,
+    required String strength,
+  }) async {
+    final String query = _normalizeMedicineText(name);
+    final String queryStrength = _normalizeMedicineText(strength);
+    return _medicines.values
+        .where((medicine) {
+          final String existingName = _normalizeMedicineText(medicine.name);
+          final String existingStrength = _normalizeMedicineText(
+            medicine.strength,
+          );
+          final bool strengthMatches =
+              queryStrength.isEmpty || existingStrength == queryStrength;
+          return strengthMatches && _isSimilarMedicineName(query, existingName);
+        })
+        .toList(growable: false);
+  }
+
+  @override
   Future<void> markTaken(String id) async {
     final m = _medicines[id];
     if (m == null || m.quantity <= 0) return;
@@ -58,6 +79,37 @@ class MockMedicineRepository implements MedicineRepository {
   Clock get clock => _clock;
 
   void dispose() => _controller.close();
+}
+
+String _normalizeMedicineText(String value) =>
+    value.toLowerCase().replaceAll(RegExp(r'[^a-z0-9]'), '');
+
+bool _isSimilarMedicineName(String first, String second) {
+  if (first.isEmpty || second.isEmpty) return false;
+  if (first == second || first.contains(second) || second.contains(first)) {
+    return true;
+  }
+  final int threshold = first.length < 7 ? 1 : 2;
+  return _editDistance(first, second) <= threshold;
+}
+
+int _editDistance(String first, String second) {
+  var previous = List<int>.generate(second.length + 1, (index) => index);
+  for (var row = 1; row <= first.length; row++) {
+    final current = List<int>.filled(second.length + 1, row);
+    for (var column = 1; column <= second.length; column++) {
+      final int replacement =
+          previous[column - 1] +
+          (first.codeUnitAt(row - 1) == second.codeUnitAt(column - 1) ? 0 : 1);
+      current[column] = <int>[
+        current[column - 1] + 1,
+        previous[column] + 1,
+        replacement,
+      ].reduce((a, b) => a < b ? a : b);
+    }
+    previous = current;
+  }
+  return previous.last;
 }
 
 /// Demo details so every seed medicine opens a complete details screen.

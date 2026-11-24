@@ -112,6 +112,22 @@ class MedicineEntryViewModel extends StateNotifier<MedicineEntryState> {
   void setReminderTimes(List<String> times) =>
       state = state.copyWith(reminderTimes: List<String>.of(times)..sort());
 
+  Future<Medicine?> findPotentialDuplicate() async {
+    if (state.name.trim().isEmpty) return null;
+    final List<Medicine> matches =
+        _repository is SimilarMedicineSearchRepository
+        ? await (_repository as SimilarMedicineSearchRepository)
+              .findSimilarMedicines(
+                name: state.name.trim(),
+                strength: state.strength.trim(),
+              )
+        : await _repository.listMedicines(filter: state.name.trim());
+    for (final Medicine match in matches) {
+      return match;
+    }
+    return null;
+  }
+
   Future<bool> save() async {
     final int? quantity = int.tryParse(state.quantity.trim());
     final DateTime? expiry = state.expiryDate;

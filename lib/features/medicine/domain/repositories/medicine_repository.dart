@@ -8,3 +8,10 @@ abstract class MedicineRepository {
   Future<void> addMedicine(Medicine medicine);
   Stream<List<Medicine>> watchMedicines();
 }
+
+abstract interface class SimilarMedicineSearchRepository {
+  Future<List<Medicine>> findSimilarMedicines({
+    required String name,
+    required String strength,
+  });
+}
