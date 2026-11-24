@@ -21,6 +21,8 @@ import '../../features/history/presentation/views/weekly_insight_view.dart';
 import '../../features/reminders/presentation/views/alarm_reminder_view.dart';
 import '../../features/reminders/presentation/views/lock_screen_notification_view.dart';
 import '../../features/reminders/presentation/views/snooze_view.dart';
+import '../../features/settings/presentation/views/more_view.dart';
+import '../../features/settings/presentation/views/settings_view.dart';
 import '../widgets/app_bottom_nav.dart';
 import '../widgets/component_gallery.dart';
 import './app_routes.dart';
@@ -96,7 +98,7 @@ class AppRouter {
           ),
           GoRoute(
             path: AppRoutes.more,
-            builder: (context, state) => const PlaceholderView(title: 'More'),
+            builder: (context, state) => const MoreView(),
           ),
         ],
       ),
@@ -166,7 +168,7 @@ class AppRouter {
       ),
       GoRoute(
         path: AppRoutes.settings,
-        builder: (context, state) => const PlaceholderView(title: 'Settings'),
+        builder: (context, state) => const SettingsView(),
       ),
       GoRoute(
         path: AppRoutes.notificationSettings,
