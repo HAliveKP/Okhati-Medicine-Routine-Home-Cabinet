@@ -471,5 +471,11 @@
   "snooze5": "5 minutes",
   "snooze10": "10 minutes",
   "snooze15": "15 minutes",
-  "snoozeCancel": "Cancel"
+  "snoozeCancel": "Cancel",
+  "duplicateMedicineTitle": "Possible duplicate",
+  "duplicateMedicineMessage": "A similar medicine, {name}, is already in your cabinet. Do you want to save this one too?",
+  "duplicateMedicineContinue": "Continue anyway",
+  "@duplicateMedicineMessage": {
+    "placeholders": {"name": {"type": "String"}}
+  }
 }

@@ -926,6 +926,200 @@ class AppLocalizationsNe extends AppLocalizations {
   String get weeklySun => 'आ';
 
   @override
+  String get familyName => 'शर्मा परिवार';
+
+  @override
+  String get familyOwnerSummary => '३ सदस्य · तपाईं मालिक हुनुहुन्छ';
+
+  @override
+  String get familyProfiles => 'प्रोफाइलहरू';
+
+  @override
+  String get familySelf => 'म (सीता)';
+
+  @override
+  String get familyMotherName => 'आमा';
+
+  @override
+  String get familyBrotherName => 'भाइ (रोहन)';
+
+  @override
+  String get familySelfSummary => 'आज ३ मध्ये २ खुराक लिइयो';
+
+  @override
+  String get familyMotherSummary => '३ मध्ये १ लिइयो · १ छुट्यो';
+
+  @override
+  String get familyBrotherSummary => 'हेर्ने · आमाको मात्र पहुँच';
+
+  @override
+  String get familyOnTrack => 'ठीक छ';
+
+  @override
+  String get familyAttention => 'ध्यान दिनुहोस्';
+
+  @override
+  String get familyInviteMember => 'परिवारका सदस्यलाई निमन्त्रणा गर्नुहोस्';
+
+  @override
+  String get familyJoinPrompt => 'कोड छ?';
+
+  @override
+  String get inviteEditorDesc =>
+      'सम्पादकले औषधि थप्न र स्टक तथा रिमाइन्डर व्यवस्थापन गर्न सक्छन्।';
+
+  @override
+  String get inviteRoleLabel => 'पहुँचको भूमिका';
+
+  @override
+  String get inviteShare => 'निमन्त्रणा साझा गर्नुहोस्';
+
+  @override
+  String get inviteCopy => 'कोड प्रतिलिपि गर्नुहोस्';
+
+  @override
+  String get inviteCopied => 'निमन्त्रणा कोड प्रतिलिपि भयो';
+
+  @override
+  String get inviteQrSemantics => 'डेमो निमन्त्रणा क्यूआर कोड';
+
+  @override
+  String get joinScanQr => 'क्यूआर कोड स्क्यान गर्नुहोस्';
+
+  @override
+  String get joinCodeLabel => 'निमन्त्रणा कोड';
+
+  @override
+  String get joinInvalid => 'जारी राख्न निमन्त्रणा कोड लेख्नुहोस्।';
+
+  @override
+  String get joinSuccess => 'तपाईं परिवारमा सामेल हुनुभयो।';
+
+  @override
+  String get memberMe => 'म';
+
+  @override
+  String get memberToday => 'आज';
+
+  @override
+  String get memberAmlodipine => 'एम्लोडिपिन';
+
+  @override
+  String get memberCalcium => 'क्याल्सियम';
+
+  @override
+  String get memberAtorvastatin => 'एटोरभास्टाटिन';
+
+  @override
+  String get memberAmlodipineStrength => '५ मि.ग्रा.';
+
+  @override
+  String get memberCalciumStrength => '५०० मि.ग्रा.';
+
+  @override
+  String get memberAtorvastatinStrength => '१० मि.ग्रा.';
+
+  @override
+  String get memberMissedAlert => 'क्याल्सियम कम छ';
+
+  @override
+  String get memberMissedDetails =>
+      '४ वटा मात्र बाँकी। चाँडै रिफिल योजना बनाउनुहोस्।';
+
+  @override
+  String get memberSeeAlerts => 'सबै सूचनाहरू हेर्नुहोस्';
+
+  @override
+  String get manageOwner => 'मालिक';
+
+  @override
+  String get manageRemove => 'सदस्य हटाउनुहोस्';
+
+  @override
+  String get manageLeave => 'परिवार छोड्नुहोस्';
+
+  @override
+  String get manageLeaveConfirmTitle => 'यो परिवार छोड्ने?';
+
+  @override
+  String get manageLeaveConfirmBody =>
+      'साझा औषधि र सूचनाहरूमा तपाईंको पहुँच हट्नेछ।';
+
+  @override
+  String get manageViewDoses => 'हेर्नेले खुराक हेर्न सक्छन्';
+
+  @override
+  String get manageViewDosesDesc => 'लिइएको, छुटेको र छोडिएको';
+
+  @override
+  String get manageEditMedicines => 'सम्पादकले औषधि थप्न सक्छन्';
+
+  @override
+  String get manageEditMedicinesDesc =>
+      'स्टक र रिमाइन्डर थप्नुहोस् वा सम्पादन गर्नुहोस्';
+
+  @override
+  String get manageSendAlerts => 'छुटेका खुराकका सूचना पठाउनुहोस्';
+
+  @override
+  String get manageSendAlertsDesc => 'मालिक र सम्पादकलाई पठाउनुहोस्';
+
+  @override
+  String get familyAlertsTitle => 'सूचनाहरू';
+
+  @override
+  String get familyAlertsFilter => 'सूचना छान्नुहोस्';
+
+  @override
+  String get familyAlertsFilterAll => 'सबै';
+
+  @override
+  String get familyAlertsFilterMissed => 'छुटेका';
+
+  @override
+  String get familyAlertsFilterStock => 'कम स्टक';
+
+  @override
+  String get familyAlertsFilterExpired => 'म्याद सकिएका';
+
+  @override
+  String get familyAlertMissedMotherTitle => 'आमाले क्याल्सियम लिन छुटाउनुभयो';
+
+  @override
+  String get familyAlertMissedMotherDetail =>
+      '१३:०० मा लिनुपर्ने · खुराक दर्ता भएन';
+
+  @override
+  String get familyAlertLowMotherTitle => 'आमाको क्याल्सियम कम छ';
+
+  @override
+  String get familyAlertLowMotherDetail => '४ वटा मात्र बाँकी';
+
+  @override
+  String get familyAlertTookMotherTitle => 'आमाले एम्लोडिपिन लिनुभयो';
+
+  @override
+  String get familyAlertTookMotherDetail => '०८:०५ मा दर्ता भयो';
+
+  @override
+  String get familyAlertExpiredTitle => 'कफ सिरपको म्याद सकियो';
+
+  @override
+  String get familyAlertExpiredDetail => 'तपाईंको दराजमा · म्याद १५ अगस्ट २०२६';
+
+  @override
+  String get familyAlertAgeOneHour => '१ घण्टा अघि';
+
+  @override
+  String get familyAlertAgeTwoHours => '२ घण्टा अघि';
+
+  @override
+  String get familyAlertAgeToday => 'आज';
+
+  @override
+  String get familyAlertAgeYesterday => 'हिजो';
+
+  @override
   String get alarmTaken => 'लिइयो';
 
   @override
@@ -966,4 +1160,15 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get snoozeCancel => 'रद्द गर्नुहोस्';
+
+  @override
+  String get duplicateMedicineTitle => 'दोहोरो हुन सक्ने औषधि';
+
+  @override
+  String duplicateMedicineMessage(String name) {
+    return 'तपाईंको दराजमा $name नामको मिल्दोजुल्दो औषधि छ। यो पनि सुरक्षित गर्ने?';
+  }
+
+  @override
+  String get duplicateMedicineContinue => 'तैपनि जारी राख्नुहोस्';
 }

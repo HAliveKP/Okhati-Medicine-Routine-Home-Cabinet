@@ -927,6 +927,197 @@ class AppLocalizationsEn extends AppLocalizations {
   String get weeklySun => 'S';
 
   @override
+  String get familyName => 'Sharma Family';
+
+  @override
+  String get familyOwnerSummary => '3 members · You are the owner';
+
+  @override
+  String get familyProfiles => 'PROFILES';
+
+  @override
+  String get familySelf => 'Me (Sita)';
+
+  @override
+  String get familyMotherName => 'Mother';
+
+  @override
+  String get familyBrotherName => 'Brother (Rohan)';
+
+  @override
+  String get familySelfSummary => '2 of 3 doses taken today';
+
+  @override
+  String get familyMotherSummary => '1 of 3 taken · 1 missed';
+
+  @override
+  String get familyBrotherSummary => 'Viewer · sees Mother only';
+
+  @override
+  String get familyOnTrack => 'On track';
+
+  @override
+  String get familyAttention => 'Needs attention';
+
+  @override
+  String get familyInviteMember => 'Invite family member';
+
+  @override
+  String get familyJoinPrompt => 'Have a code?';
+
+  @override
+  String get inviteEditorDesc =>
+      'Editors can add medicines and manage stock and reminders.';
+
+  @override
+  String get inviteRoleLabel => 'Access role';
+
+  @override
+  String get inviteShare => 'Share invite';
+
+  @override
+  String get inviteCopy => 'Copy code';
+
+  @override
+  String get inviteCopied => 'Invite code copied';
+
+  @override
+  String get inviteQrSemantics => 'Mock invite QR code';
+
+  @override
+  String get joinScanQr => 'Scan QR code';
+
+  @override
+  String get joinCodeLabel => 'Invite code';
+
+  @override
+  String get joinInvalid => 'Enter the invite code to continue.';
+
+  @override
+  String get joinSuccess => 'You joined the family.';
+
+  @override
+  String get memberMe => 'Me';
+
+  @override
+  String get memberToday => 'TODAY';
+
+  @override
+  String get memberAmlodipine => 'Amlodipine';
+
+  @override
+  String get memberCalcium => 'Calcium';
+
+  @override
+  String get memberAtorvastatin => 'Atorvastatin';
+
+  @override
+  String get memberAmlodipineStrength => '5 mg';
+
+  @override
+  String get memberCalciumStrength => '500 mg';
+
+  @override
+  String get memberAtorvastatinStrength => '10 mg';
+
+  @override
+  String get memberMissedAlert => 'Calcium is low';
+
+  @override
+  String get memberMissedDetails => 'Only 4 left. Plan a refill soon.';
+
+  @override
+  String get memberSeeAlerts => 'See all alerts';
+
+  @override
+  String get manageOwner => 'Owner';
+
+  @override
+  String get manageRemove => 'Remove member';
+
+  @override
+  String get manageLeave => 'Leave family';
+
+  @override
+  String get manageLeaveConfirmTitle => 'Leave this family?';
+
+  @override
+  String get manageLeaveConfirmBody =>
+      'You will lose access to shared medicines and alerts.';
+
+  @override
+  String get manageViewDoses => 'Viewers can see doses';
+
+  @override
+  String get manageViewDosesDesc => 'Taken, missed and skipped';
+
+  @override
+  String get manageEditMedicines => 'Editors can add medicines';
+
+  @override
+  String get manageEditMedicinesDesc => 'Add and edit stock and reminders';
+
+  @override
+  String get manageSendAlerts => 'Send missed-dose alerts';
+
+  @override
+  String get manageSendAlertsDesc => 'Push to owner and editors';
+
+  @override
+  String get familyAlertsTitle => 'Alerts';
+
+  @override
+  String get familyAlertsFilter => 'Filter alerts';
+
+  @override
+  String get familyAlertsFilterAll => 'All';
+
+  @override
+  String get familyAlertsFilterMissed => 'Missed';
+
+  @override
+  String get familyAlertsFilterStock => 'Low stock';
+
+  @override
+  String get familyAlertsFilterExpired => 'Expired';
+
+  @override
+  String get familyAlertMissedMotherTitle => 'Mother missed Calcium';
+
+  @override
+  String get familyAlertMissedMotherDetail => 'Due at 13:00 · no dose logged';
+
+  @override
+  String get familyAlertLowMotherTitle => 'Calcium is low for Mother';
+
+  @override
+  String get familyAlertLowMotherDetail => 'Only 4 left';
+
+  @override
+  String get familyAlertTookMotherTitle => 'Mother took Amlodipine';
+
+  @override
+  String get familyAlertTookMotherDetail => 'Logged at 08:05';
+
+  @override
+  String get familyAlertExpiredTitle => 'Cough syrup has expired';
+
+  @override
+  String get familyAlertExpiredDetail => 'In your cabinet · Exp 15 Aug 2026';
+
+  @override
+  String get familyAlertAgeOneHour => '1 h ago';
+
+  @override
+  String get familyAlertAgeTwoHours => '2 h ago';
+
+  @override
+  String get familyAlertAgeToday => 'Today';
+
+  @override
+  String get familyAlertAgeYesterday => 'Yesterday';
+
+  @override
   String get alarmTaken => 'Taken';
 
   @override
@@ -967,4 +1158,15 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get snoozeCancel => 'Cancel';
+
+  @override
+  String get duplicateMedicineTitle => 'Possible duplicate';
+
+  @override
+  String duplicateMedicineMessage(String name) {
+    return 'A similar medicine, $name, is already in your cabinet. Do you want to save this one too?';
+  }
+
+  @override
+  String get duplicateMedicineContinue => 'Continue anyway';
 }

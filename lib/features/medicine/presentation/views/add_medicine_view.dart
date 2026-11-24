@@ -11,6 +11,7 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/widgets/app_button.dart';
 import '../../../../core/widgets/app_top_bar.dart';
+import '../../domain/models/medicine.dart';
 import '../viewmodels/medicine_entry_view_model.dart';
 import '../widgets/medicine_entry_field.dart';
 
@@ -127,17 +128,42 @@ class AddMedicineView extends ConsumerWidget {
                 text: l10n.addMedicineSave,
                 onPressed: state.isSaving
                     ? null
-                    : () async {
-                        if (await model.save() && context.mounted) {
-                          context.go(AppRoutes.cabinet);
-                        }
-                      },
+                    : () => _saveMedicine(context, model, l10n),
               ),
             ),
           ],
         ),
       ),
     );
+  }
+
+  Future<void> _saveMedicine(
+    BuildContext context,
+    MedicineEntryViewModel model,
+    AppLocalizations l10n,
+  ) async {
+    final Medicine? duplicate = await model.findPotentialDuplicate();
+    if (duplicate != null && context.mounted) {
+      final bool? continueSaving = await showDialog<bool>(
+        context: context,
+        builder: (dialogContext) => AlertDialog(
+          title: Text(l10n.duplicateMedicineTitle),
+          content: Text(l10n.duplicateMedicineMessage(duplicate.name)),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(dialogContext).pop(false),
+              child: Text(l10n.commonCancel),
+            ),
+            TextButton(
+              onPressed: () => Navigator.of(dialogContext).pop(true),
+              child: Text(l10n.duplicateMedicineContinue),
+            ),
+          ],
+        ),
+      );
+      if (continueSaving != true) return;
+    }
+    if (await model.save() && context.mounted) context.go(AppRoutes.cabinet);
   }
 
   Future<void> _chooseExpiry(

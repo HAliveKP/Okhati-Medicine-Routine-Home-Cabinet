@@ -362,5 +362,11 @@
   "snooze5": "५ मिनेट",
   "snooze10": "१० मिनेट",
   "snooze15": "१५ मिनेट",
-  "snoozeCancel": "रद्द गर्नुहोस्"
+  "snoozeCancel": "रद्द गर्नुहोस्",
+  "duplicateMedicineTitle": "दोहोरो हुन सक्ने औषधि",
+  "duplicateMedicineMessage": "तपाईंको दराजमा {name} नामको मिल्दोजुल्दो औषधि छ। यो पनि सुरक्षित गर्ने?",
+  "duplicateMedicineContinue": "तैपनि जारी राख्नुहोस्",
+  "@duplicateMedicineMessage": {
+    "placeholders": {"name": {"type": "String"}}
+  }
 }

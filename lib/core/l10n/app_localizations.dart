@@ -1814,6 +1814,384 @@ abstract class AppLocalizations {
   /// **'S'**
   String get weeklySun;
 
+  /// No description provided for @familyName.
+  ///
+  /// In en, this message translates to:
+  /// **'Sharma Family'**
+  String get familyName;
+
+  /// No description provided for @familyOwnerSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'3 members · You are the owner'**
+  String get familyOwnerSummary;
+
+  /// No description provided for @familyProfiles.
+  ///
+  /// In en, this message translates to:
+  /// **'PROFILES'**
+  String get familyProfiles;
+
+  /// No description provided for @familySelf.
+  ///
+  /// In en, this message translates to:
+  /// **'Me (Sita)'**
+  String get familySelf;
+
+  /// No description provided for @familyMotherName.
+  ///
+  /// In en, this message translates to:
+  /// **'Mother'**
+  String get familyMotherName;
+
+  /// No description provided for @familyBrotherName.
+  ///
+  /// In en, this message translates to:
+  /// **'Brother (Rohan)'**
+  String get familyBrotherName;
+
+  /// No description provided for @familySelfSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'2 of 3 doses taken today'**
+  String get familySelfSummary;
+
+  /// No description provided for @familyMotherSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'1 of 3 taken · 1 missed'**
+  String get familyMotherSummary;
+
+  /// No description provided for @familyBrotherSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Viewer · sees Mother only'**
+  String get familyBrotherSummary;
+
+  /// No description provided for @familyOnTrack.
+  ///
+  /// In en, this message translates to:
+  /// **'On track'**
+  String get familyOnTrack;
+
+  /// No description provided for @familyAttention.
+  ///
+  /// In en, this message translates to:
+  /// **'Needs attention'**
+  String get familyAttention;
+
+  /// No description provided for @familyInviteMember.
+  ///
+  /// In en, this message translates to:
+  /// **'Invite family member'**
+  String get familyInviteMember;
+
+  /// No description provided for @familyJoinPrompt.
+  ///
+  /// In en, this message translates to:
+  /// **'Have a code?'**
+  String get familyJoinPrompt;
+
+  /// No description provided for @inviteEditorDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Editors can add medicines and manage stock and reminders.'**
+  String get inviteEditorDesc;
+
+  /// No description provided for @inviteRoleLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Access role'**
+  String get inviteRoleLabel;
+
+  /// No description provided for @inviteShare.
+  ///
+  /// In en, this message translates to:
+  /// **'Share invite'**
+  String get inviteShare;
+
+  /// No description provided for @inviteCopy.
+  ///
+  /// In en, this message translates to:
+  /// **'Copy code'**
+  String get inviteCopy;
+
+  /// No description provided for @inviteCopied.
+  ///
+  /// In en, this message translates to:
+  /// **'Invite code copied'**
+  String get inviteCopied;
+
+  /// No description provided for @inviteQrSemantics.
+  ///
+  /// In en, this message translates to:
+  /// **'Mock invite QR code'**
+  String get inviteQrSemantics;
+
+  /// No description provided for @joinScanQr.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan QR code'**
+  String get joinScanQr;
+
+  /// No description provided for @joinCodeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Invite code'**
+  String get joinCodeLabel;
+
+  /// No description provided for @joinInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the invite code to continue.'**
+  String get joinInvalid;
+
+  /// No description provided for @joinSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'You joined the family.'**
+  String get joinSuccess;
+
+  /// No description provided for @memberMe.
+  ///
+  /// In en, this message translates to:
+  /// **'Me'**
+  String get memberMe;
+
+  /// No description provided for @memberToday.
+  ///
+  /// In en, this message translates to:
+  /// **'TODAY'**
+  String get memberToday;
+
+  /// No description provided for @memberAmlodipine.
+  ///
+  /// In en, this message translates to:
+  /// **'Amlodipine'**
+  String get memberAmlodipine;
+
+  /// No description provided for @memberCalcium.
+  ///
+  /// In en, this message translates to:
+  /// **'Calcium'**
+  String get memberCalcium;
+
+  /// No description provided for @memberAtorvastatin.
+  ///
+  /// In en, this message translates to:
+  /// **'Atorvastatin'**
+  String get memberAtorvastatin;
+
+  /// No description provided for @memberAmlodipineStrength.
+  ///
+  /// In en, this message translates to:
+  /// **'5 mg'**
+  String get memberAmlodipineStrength;
+
+  /// No description provided for @memberCalciumStrength.
+  ///
+  /// In en, this message translates to:
+  /// **'500 mg'**
+  String get memberCalciumStrength;
+
+  /// No description provided for @memberAtorvastatinStrength.
+  ///
+  /// In en, this message translates to:
+  /// **'10 mg'**
+  String get memberAtorvastatinStrength;
+
+  /// No description provided for @memberMissedAlert.
+  ///
+  /// In en, this message translates to:
+  /// **'Calcium is low'**
+  String get memberMissedAlert;
+
+  /// No description provided for @memberMissedDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Only 4 left. Plan a refill soon.'**
+  String get memberMissedDetails;
+
+  /// No description provided for @memberSeeAlerts.
+  ///
+  /// In en, this message translates to:
+  /// **'See all alerts'**
+  String get memberSeeAlerts;
+
+  /// No description provided for @manageOwner.
+  ///
+  /// In en, this message translates to:
+  /// **'Owner'**
+  String get manageOwner;
+
+  /// No description provided for @manageRemove.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove member'**
+  String get manageRemove;
+
+  /// No description provided for @manageLeave.
+  ///
+  /// In en, this message translates to:
+  /// **'Leave family'**
+  String get manageLeave;
+
+  /// No description provided for @manageLeaveConfirmTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Leave this family?'**
+  String get manageLeaveConfirmTitle;
+
+  /// No description provided for @manageLeaveConfirmBody.
+  ///
+  /// In en, this message translates to:
+  /// **'You will lose access to shared medicines and alerts.'**
+  String get manageLeaveConfirmBody;
+
+  /// No description provided for @manageViewDoses.
+  ///
+  /// In en, this message translates to:
+  /// **'Viewers can see doses'**
+  String get manageViewDoses;
+
+  /// No description provided for @manageViewDosesDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Taken, missed and skipped'**
+  String get manageViewDosesDesc;
+
+  /// No description provided for @manageEditMedicines.
+  ///
+  /// In en, this message translates to:
+  /// **'Editors can add medicines'**
+  String get manageEditMedicines;
+
+  /// No description provided for @manageEditMedicinesDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Add and edit stock and reminders'**
+  String get manageEditMedicinesDesc;
+
+  /// No description provided for @manageSendAlerts.
+  ///
+  /// In en, this message translates to:
+  /// **'Send missed-dose alerts'**
+  String get manageSendAlerts;
+
+  /// No description provided for @manageSendAlertsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Push to owner and editors'**
+  String get manageSendAlertsDesc;
+
+  /// No description provided for @familyAlertsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Alerts'**
+  String get familyAlertsTitle;
+
+  /// No description provided for @familyAlertsFilter.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter alerts'**
+  String get familyAlertsFilter;
+
+  /// No description provided for @familyAlertsFilterAll.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get familyAlertsFilterAll;
+
+  /// No description provided for @familyAlertsFilterMissed.
+  ///
+  /// In en, this message translates to:
+  /// **'Missed'**
+  String get familyAlertsFilterMissed;
+
+  /// No description provided for @familyAlertsFilterStock.
+  ///
+  /// In en, this message translates to:
+  /// **'Low stock'**
+  String get familyAlertsFilterStock;
+
+  /// No description provided for @familyAlertsFilterExpired.
+  ///
+  /// In en, this message translates to:
+  /// **'Expired'**
+  String get familyAlertsFilterExpired;
+
+  /// No description provided for @familyAlertMissedMotherTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Mother missed Calcium'**
+  String get familyAlertMissedMotherTitle;
+
+  /// No description provided for @familyAlertMissedMotherDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Due at 13:00 · no dose logged'**
+  String get familyAlertMissedMotherDetail;
+
+  /// No description provided for @familyAlertLowMotherTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Calcium is low for Mother'**
+  String get familyAlertLowMotherTitle;
+
+  /// No description provided for @familyAlertLowMotherDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Only 4 left'**
+  String get familyAlertLowMotherDetail;
+
+  /// No description provided for @familyAlertTookMotherTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Mother took Amlodipine'**
+  String get familyAlertTookMotherTitle;
+
+  /// No description provided for @familyAlertTookMotherDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Logged at 08:05'**
+  String get familyAlertTookMotherDetail;
+
+  /// No description provided for @familyAlertExpiredTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Cough syrup has expired'**
+  String get familyAlertExpiredTitle;
+
+  /// No description provided for @familyAlertExpiredDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'In your cabinet · Exp 15 Aug 2026'**
+  String get familyAlertExpiredDetail;
+
+  /// No description provided for @familyAlertAgeOneHour.
+  ///
+  /// In en, this message translates to:
+  /// **'1 h ago'**
+  String get familyAlertAgeOneHour;
+
+  /// No description provided for @familyAlertAgeTwoHours.
+  ///
+  /// In en, this message translates to:
+  /// **'2 h ago'**
+  String get familyAlertAgeTwoHours;
+
+  /// No description provided for @familyAlertAgeToday.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get familyAlertAgeToday;
+
+  /// No description provided for @familyAlertAgeYesterday.
+  ///
+  /// In en, this message translates to:
+  /// **'Yesterday'**
+  String get familyAlertAgeYesterday;
+
   /// No description provided for @alarmTaken.
   ///
   /// In en, this message translates to:
@@ -1897,6 +2275,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Cancel'**
   String get snoozeCancel;
+
+  /// No description provided for @duplicateMedicineTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Possible duplicate'**
+  String get duplicateMedicineTitle;
+
+  /// No description provided for @duplicateMedicineMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'A similar medicine, {name}, is already in your cabinet. Do you want to save this one too?'**
+  String duplicateMedicineMessage(String name);
+
+  /// No description provided for @duplicateMedicineContinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue anyway'**
+  String get duplicateMedicineContinue;
 }
 
 class _AppLocalizationsDelegate
