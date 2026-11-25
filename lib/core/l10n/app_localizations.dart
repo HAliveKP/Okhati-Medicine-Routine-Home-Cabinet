@@ -2293,6 +2293,9 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Continue anyway'**
   String get duplicateMedicineContinue;
+  String get doseSkip;
+  String get doseMarkedTaken;
+  String get doseAlreadyLogged;
 }
 
 class _AppLocalizationsDelegate

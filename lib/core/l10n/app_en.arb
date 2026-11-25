@@ -478,4 +478,7 @@
   "@duplicateMedicineMessage": {
     "placeholders": {"name": {"type": "String"}}
   }
+  "doseSkip": "Skip",
+  "doseMarkedTaken": "Marked as taken",
+  "doseAlreadyLogged": "This dose is already logged"
 }

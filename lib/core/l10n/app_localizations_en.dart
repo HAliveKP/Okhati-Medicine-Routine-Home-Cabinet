@@ -1169,4 +1169,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get duplicateMedicineContinue => 'Continue anyway';
+
+  @override
+  String get doseSkip => 'Skip';
+
+  @override
+  String get doseMarkedTaken => 'Marked as taken';
+
+  @override
+  String get doseAlreadyLogged => 'This dose is already logged';
 }
