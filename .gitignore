@@ -1,18 +1,52 @@
-# Flutter/Dart
-/.packages
-/.dart_tool/
-/build/
-/.dart_tool
+# Flutter and Dart generated files
+.dart_tool/
+build/
+coverage/
+.packages
+.pub-cache/
+.pub/
 .flutter-plugins
 .flutter-plugins-dependencies
-*.iws
-*.iml
-.idea/
-.DS_Store
+flutter_*.png
+android/local.properties
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+android/app/debug/
+android/app/profile/
+android/app/release/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/.last_build_id
+ios/Flutter/ephemeral/
+macos/Flutter/ephemeral/
+linux/flutter/ephemeral/
+windows/flutter/ephemeral/
 
-# Okhati agent kit (agent definitions, skills, docs — not part of the app)
-okhati-agent-kit/
+# Local browser profiles created during UI inspection
+docs/build/chrome-profile*/
 
-# Generated agent skills / lockfiles
-.agents/
+# Original design exports and local story workbook.
+# Tracked working copies and project notes remain in docs/design/screens/ and docs/build/.
+/Okhati_desgn/
+/Okhati.xlsx
+
+# Local agent kits/configuration are development tooling, not app source.
+/.agents/
+/.codex/
+/okhati-agent-kit/
+/okhati-codex-kit/
 skills-lock.json
+
+# IDE and operating-system files
+.idea/
+.vscode/
+*.iml
+*.iws
+.DS_Store
+Thumbs.db
+
+# Logs, temporary files, and local dependencies
+*.log
+*.tmp
+*.swp
+node_modules/

@@ -29,9 +29,10 @@ class AuthView extends ConsumerWidget {
         final bool succeeded = await model.submit(createAccount: createAccount);
         if (succeeded && context.mounted) context.go(AppRoutes.today);
       },
-      onContinueDemo: () {
-        model.continueDemo();
-        context.go(AppRoutes.today);
+      onContinueDemo: () async {
+        if (await model.signInWithGoogle() && context.mounted) {
+          context.go(AppRoutes.today);
+        }
       },
       onSwitchMode: () =>
           context.go(createAccount ? AppRoutes.signIn : AppRoutes.signUp),

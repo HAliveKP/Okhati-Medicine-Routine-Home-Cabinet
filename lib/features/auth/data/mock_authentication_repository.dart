@@ -13,4 +13,7 @@ class MockAuthenticationRepository implements AuthenticationRepository {
     required String email,
     required String password,
   }) async => true;
+
+  @override
+  Future<bool> signInWithGoogle() async => true;
 }

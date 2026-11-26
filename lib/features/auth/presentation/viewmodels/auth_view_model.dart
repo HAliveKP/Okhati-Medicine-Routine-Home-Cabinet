@@ -48,7 +48,12 @@ class AuthViewModel extends StateNotifier<AuthState> {
   void setAccepted(bool value) => state = state.copyWith(accepted: value);
   void togglePasswordVisibility() =>
       state = state.copyWith(passwordVisible: !state.passwordVisible);
-  void continueDemo() => state = state.copyWith(error: false);
+
+  Future<bool> signInWithGoogle() async {
+    final result = await _repository.signInWithGoogle();
+    state = state.copyWith(error: !result);
+    return result;
+  }
 
   Future<bool> submit({required bool createAccount}) async {
     final bool validEmail = RegExp(r'^.+@.+\..+$').hasMatch(state.email.trim());

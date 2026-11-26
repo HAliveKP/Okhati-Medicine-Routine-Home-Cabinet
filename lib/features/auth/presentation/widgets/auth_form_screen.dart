@@ -36,7 +36,7 @@ class AuthFormScreen extends StatelessWidget {
   final ValueChanged<bool> onAcceptedChanged;
   final VoidCallback onPasswordVisibilityChanged;
   final VoidCallback onSubmit;
-  final VoidCallback onContinueDemo;
+  final Future<void> Function() onContinueDemo;
   final VoidCallback onSwitchMode;
 
   @override
@@ -104,7 +104,7 @@ class AuthFormContent extends StatelessWidget {
   final ValueChanged<bool> onAcceptedChanged;
   final VoidCallback onPasswordVisibilityChanged;
   final VoidCallback onSubmit;
-  final VoidCallback onContinueDemo;
+  final Future<void> Function() onContinueDemo;
   final VoidCallback onSwitchMode;
 
   @override
@@ -272,7 +272,7 @@ class AuthFormActions extends StatelessWidget {
 
   final bool createAccount;
   final VoidCallback onSubmit;
-  final VoidCallback onContinueDemo;
+  final Future<void> Function() onContinueDemo;
 
   @override
   Widget build(BuildContext context) {
