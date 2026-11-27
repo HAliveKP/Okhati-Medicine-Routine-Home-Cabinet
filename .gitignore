@@ -2,13 +2,17 @@
 /.packages
 /.dart_tool/
 /build/
-/.dart_tool
 .flutter-plugins
 .flutter-plugins-dependencies
+/.pub-cache/
+/.pub/
 *.iws
 *.iml
 .idea/
+.vscode/*
+!.vscode/settings.json
 .DS_Store
+pubspec.lock.bak
 
 # Okhati agent kit (agent definitions, skills, docs — not part of the app)
 okhati-agent-kit/
@@ -16,3 +20,31 @@ okhati-agent-kit/
 # Generated agent skills / lockfiles
 .agents/
 skills-lock.json
+
+# Android
+android/.gradle/
+android/local.properties
+android/key.properties
+*.jks
+*.keystore
+android/app/google-services.json
+**/GeneratedPluginRegistrant.*
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Generated.xcconfig
+ios/GoogleService-Info.plist
+
+# Firebase / secrets
+lib/firebase_options.dart
+.env
+.env.*
+*.secret
+firebase/functions/node_modules/
+firebase/functions/lib/
+firebase/.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+serviceAccountKey*.json

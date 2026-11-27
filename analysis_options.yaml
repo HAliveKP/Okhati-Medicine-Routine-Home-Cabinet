@@ -31,3 +31,4 @@ linter:
     - use_super_parameters
     - prefer_relative_imports
     - sort_child_properties_last
+    - require_trailing_commas
