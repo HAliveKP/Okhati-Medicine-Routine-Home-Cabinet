@@ -1,48 +1,79 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.build/
-.buildlog/
-.history
-.svn/
-.swiftpm/
-migrate_working_dir/
-
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
-
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
+# Flutter and Dart generated files
 .dart_tool/
-.flutter-plugins-dependencies
+build/
+coverage/
+.packages
 .pub-cache/
 .pub/
-/build/
-/coverage/
+.flutter-plugins
+.flutter-plugins-dependencies
+flutter_*.png
+android/local.properties
+android/key.properties
+android/.gradle/
+*.jks
+*.keystore
+android/app/google-services.json
+android/app/debug/
+android/app/profile/
+android/app/release/
+ios/Runner/GoogleService-Info.plist
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/.last_build_id
+ios/Flutter/ephemeral/
+macos/Flutter/ephemeral/
+linux/flutter/ephemeral/
+windows/flutter/ephemeral/
+*.iws
+*.iml
+.idea/
+.vscode/*
+!.vscode/settings.json
+.DS_Store
+pubspec.lock.bak
+**/GeneratedPluginRegistrant.*
 
-# Symbolication related
-app.*.symbols
+# Firebase / secrets
+lib/firebase_options.dart
+.env
+.env.*
+*.secret
+firebase/functions/node_modules/
+firebase/functions/lib/
+firebase/.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+serviceAccountKey*.json
 
-# Obfuscation related
-app.*.map.json
+# Local browser profiles created during UI inspection
+docs/build/chrome-profile*/
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# Original design exports and local story workbook.
+# Tracked working copies and project notes remain in docs/design/screens/ and docs/build/.
+/Okhati_desgn/
+/Okhati.xlsx
 
-# Widget Preview related
-.widget_preview/
+# Local agent kits/configuration are development tooling, not app source.
+/.agents/
+/.codex/
+/okhati-agent-kit/
+/okhati-codex-kit/
+skills-lock.json
+
+# IDE and operating-system files
+.idea/
+.vscode/
+*.iml
+*.iws
+.DS_Store
+Thumbs.db
+
+# Logs, temporary files, and local dependencies
+*.log
+*.tmp
+*.swp
+node_modules/

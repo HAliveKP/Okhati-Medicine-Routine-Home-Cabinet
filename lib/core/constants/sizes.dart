@@ -1,0 +1,50 @@
+/// Fixed sizes used across the app (dp).
+class AppSizes {
+  const AppSizes._();
+
+  static const double minTouch = 48;
+  static const double takenButton = 56;
+  static const double buttonHeight = 56;
+  static const double avatar = 48;
+  static const double cardRadius = 12;
+  static const double controlRadius = 12;
+  static const double buttonRadius = 16;
+  static const double topBarHeight = 56;
+  static const double filterChipInset = 16;
+  static const double profileAvatarGap = 8;
+  static const double profileSwitcherInset = 12;
+  static const double profileSwitcherGap = 4;
+  static const double chipRadius = 999;
+  static const double statusChipHeight = 25;
+  static const double statusChipIcon = 14;
+  static const double statusChipGap = 4;
+  static const double statusChipHorizontalPadding = 8;
+  static const double statusChipVerticalPadding = 4;
+  static const double selectedBorderWidth = 2;
+  static const double bottomNavHeight = 84;
+  static const double navIconWrapWidth = 56;
+  static const double navIconWrapHeight = 32;
+  static const double medicineThumb = 56;
+  static const double medicineThumbIcon = 28;
+  static const double fab = 64;
+  static const double inputHeight = 56;
+  static const double assetFallbackIcon = 24;
+  static const double emptyStateIllustration = 160;
+  static const double emptyStateIcon = 64;
+  static const double splashLogo = 112;
+  static const double onboardingIllustration = 260;
+  static const double onboardingIllustrationInner = 180;
+  static const double onboardingIllustrationIcon = 80;
+  static const double authLogo = 56;
+  static const double entryCardRadius = 16;
+  static const double onboardingDotRadius = 999;
+  static const double authMaxWidth = 520;
+  static const double entryChoiceIcon = 28;
+  static const double alarmTimeFontSize = 72;
+  static const double snoozeIcon = 48;
+  static const double snoozeHandleWidth = 44;
+  static const double weeklyChartHeight = 78;
+  static const double weeklyBarWidth = 30;
+  static const double inviteQrTile = 230;
+  static const double inviteQrCode = 196;
+}
