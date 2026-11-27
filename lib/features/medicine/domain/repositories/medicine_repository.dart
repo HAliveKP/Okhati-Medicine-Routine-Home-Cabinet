@@ -6,6 +6,8 @@ abstract class MedicineRepository {
   Future<Medicine?> getMedicine(String id);
   Future<void> markTaken(String id);
   Future<void> addMedicine(Medicine medicine);
+  Future<void> updateMedicine(Medicine medicine);
+  Future<void> deleteMedicine(String id);
   Stream<List<Medicine>> watchMedicines();
 }
 

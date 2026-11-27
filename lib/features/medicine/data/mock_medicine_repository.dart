@@ -38,6 +38,21 @@ class MockMedicineRepository
   Future<Medicine?> getMedicine(String id) async => _medicines[id];
 
   @override
+  Future<void> updateMedicine(Medicine medicine) async {
+    if (!_medicines.containsKey(medicine.id)) {
+      throw StateError('Medicine not found: ${medicine.id}');
+    }
+    _medicines[medicine.id] = medicine;
+    _controller.add(_medicines.values.toList());
+  }
+
+  @override
+  Future<void> deleteMedicine(String id) async {
+    _medicines.remove(id);
+    _controller.add(_medicines.values.toList());
+  }
+
+  @override
   Future<List<Medicine>> findSimilarMedicines({
     required String name,
     required String strength,

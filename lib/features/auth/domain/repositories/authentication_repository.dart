@@ -5,4 +5,5 @@ abstract interface class AuthenticationRepository {
     required String email,
     required String password,
   });
+  Future<bool> signInWithGoogle();
 }

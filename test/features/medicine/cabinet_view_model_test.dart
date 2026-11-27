@@ -77,8 +77,9 @@ void main() {
   });
 
   test('load sets hasError when the repository throws', () async {
-    final CabinetViewModel failing =
-        CabinetViewModel(repository: _ThrowingMedicineRepository());
+    final CabinetViewModel failing = CabinetViewModel(
+      repository: _ThrowingMedicineRepository(),
+    );
 
     await failing.load();
 
@@ -99,6 +100,12 @@ class _ThrowingMedicineRepository implements MedicineRepository {
 
   @override
   Future<void> addMedicine(Medicine medicine) async {}
+
+  @override
+  Future<void> updateMedicine(Medicine medicine) async {}
+
+  @override
+  Future<void> deleteMedicine(String id) async {}
 
   @override
   Stream<List<Medicine>> watchMedicines() => const Stream.empty();

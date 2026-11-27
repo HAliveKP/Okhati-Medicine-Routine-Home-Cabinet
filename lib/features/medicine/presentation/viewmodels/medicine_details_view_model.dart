@@ -68,6 +68,34 @@ class MedicineDetailsViewModel extends StateNotifier<MedicineDetailsState> {
       return false;
     }
   }
+
+  Future<bool> updateMedicine(Medicine medicine) async {
+    if (medicine.id != medicineId || state.medicine == null || state.isSaving) {
+      return false;
+    }
+    state = state.copyWith(isSaving: true, hasError: false);
+    try {
+      await repository.updateMedicine(medicine);
+      state = state.copyWith(isSaving: false, medicine: medicine);
+      return true;
+    } catch (_) {
+      state = state.copyWith(isSaving: false, hasError: true);
+      return false;
+    }
+  }
+
+  Future<bool> deleteMedicine() async {
+    if (state.medicine == null || state.isSaving) return false;
+    state = state.copyWith(isSaving: true, hasError: false);
+    try {
+      await repository.deleteMedicine(medicineId);
+      state = state.copyWith(isSaving: false, medicine: null);
+      return true;
+    } catch (_) {
+      state = state.copyWith(isSaving: false, hasError: true);
+      return false;
+    }
+  }
 }
 
 final medicineDetailsViewModelProvider =

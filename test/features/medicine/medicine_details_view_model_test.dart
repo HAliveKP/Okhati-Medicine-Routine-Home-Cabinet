@@ -64,6 +64,50 @@ void main() {
     expect(viewModel.state.medicine?.quantity, 0);
   });
 
+  test('updateMedicine persists changed cabinet fields', () async {
+    final MedicineDetailsViewModel viewModel = MedicineDetailsViewModel(
+      repository: repository,
+      medicineId: 'm2',
+    );
+    await viewModel.load();
+    final Medicine updated = viewModel.state.medicine!.copyWith(
+      name: 'Amoxicillin updated',
+      quantity: 12,
+    );
+
+    expect(await viewModel.updateMedicine(updated), isTrue);
+    expect((await repository.getMedicine('m2'))?.name, 'Amoxicillin updated');
+    expect((await repository.getMedicine('m2'))?.quantity, 12);
+  });
+
+  test('updateMedicine rejects another medicine id', () async {
+    final MedicineDetailsViewModel viewModel = MedicineDetailsViewModel(
+      repository: repository,
+      medicineId: 'm2',
+    );
+    await viewModel.load();
+
+    expect(
+      await viewModel.updateMedicine(
+        viewModel.state.medicine!.copyWith(id: 'm1'),
+      ),
+      isFalse,
+    );
+    expect((await repository.getMedicine('m2'))?.name, 'Amoxicillin');
+  });
+
+  test('deleteMedicine removes the record and updates the state', () async {
+    final MedicineDetailsViewModel viewModel = MedicineDetailsViewModel(
+      repository: repository,
+      medicineId: 'm2',
+    );
+    await viewModel.load();
+
+    expect(await viewModel.deleteMedicine(), isTrue);
+    expect(viewModel.state.medicine, isNull);
+    expect(await repository.getMedicine('m2'), isNull);
+  });
+
   test('load sets hasError when the repository throws', () async {
     final MedicineDetailsViewModel viewModel = MedicineDetailsViewModel(
       repository: _ThrowingMedicineRepository(),
@@ -89,6 +133,12 @@ class _ThrowingMedicineRepository implements MedicineRepository {
 
   @override
   Future<void> addMedicine(Medicine medicine) async {}
+
+  @override
+  Future<void> updateMedicine(Medicine medicine) async {}
+
+  @override
+  Future<void> deleteMedicine(String id) async {}
 
   @override
   Stream<List<Medicine>> watchMedicines() => const Stream.empty();

@@ -1,11 +1,32 @@
-# Flutter/Dart
-/.packages
-/.dart_tool/
-/build/
+# Flutter and Dart generated files
+.dart_tool/
+build/
+coverage/
+.packages
+.pub-cache/
+.pub/
 .flutter-plugins
 .flutter-plugins-dependencies
-/.pub-cache/
-/.pub/
+flutter_*.png
+android/local.properties
+android/key.properties
+android/.gradle/
+*.jks
+*.keystore
+android/app/google-services.json
+android/app/debug/
+android/app/profile/
+android/app/release/
+ios/Runner/GoogleService-Info.plist
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/.last_build_id
+ios/Flutter/ephemeral/
+macos/Flutter/ephemeral/
+linux/flutter/ephemeral/
+windows/flutter/ephemeral/
 *.iws
 *.iml
 .idea/
@@ -13,28 +34,7 @@
 !.vscode/settings.json
 .DS_Store
 pubspec.lock.bak
-
-# Okhati agent kit (agent definitions, skills, docs — not part of the app)
-okhati-agent-kit/
-
-# Generated agent skills / lockfiles
-.agents/
-skills-lock.json
-
-# Android
-android/.gradle/
-android/local.properties
-android/key.properties
-*.jks
-*.keystore
-android/app/google-services.json
 **/GeneratedPluginRegistrant.*
-
-# iOS
-ios/Pods/
-ios/.symlinks/
-ios/Flutter/Generated.xcconfig
-ios/GoogleService-Info.plist
 
 # Firebase / secrets
 lib/firebase_options.dart
@@ -48,3 +48,32 @@ firebase-debug.log
 firestore-debug.log
 ui-debug.log
 serviceAccountKey*.json
+
+# Local browser profiles created during UI inspection
+docs/build/chrome-profile*/
+
+# Original design exports and local story workbook.
+# Tracked working copies and project notes remain in docs/design/screens/ and docs/build/.
+/Okhati_desgn/
+/Okhati.xlsx
+
+# Local agent kits/configuration are development tooling, not app source.
+/.agents/
+/.codex/
+/okhati-agent-kit/
+/okhati-codex-kit/
+skills-lock.json
+
+# IDE and operating-system files
+.idea/
+.vscode/
+*.iml
+*.iws
+.DS_Store
+Thumbs.db
+
+# Logs, temporary files, and local dependencies
+*.log
+*.tmp
+*.swp
+node_modules/
