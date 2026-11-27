@@ -1171,4 +1171,13 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get duplicateMedicineContinue => 'तैपनि जारी राख्नुहोस्';
+
+  @override
+  String get doseSkip => 'छोड्नुहोस्';
+
+  @override
+  String get doseMarkedTaken => 'लिइएको भनी दर्ता भयो';
+
+  @override
+  String get doseAlreadyLogged => 'यो खुराक पहिले नै दर्ता छ';
 }

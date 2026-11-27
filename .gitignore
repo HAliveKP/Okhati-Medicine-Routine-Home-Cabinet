@@ -9,11 +9,17 @@ coverage/
 .flutter-plugins-dependencies
 flutter_*.png
 android/local.properties
+android/key.properties
+android/.gradle/
+*.jks
+*.keystore
 android/app/google-services.json
-ios/Runner/GoogleService-Info.plist
 android/app/debug/
 android/app/profile/
 android/app/release/
+ios/Runner/GoogleService-Info.plist
+ios/Pods/
+ios/.symlinks/
 ios/Flutter/Generated.xcconfig
 ios/Flutter/flutter_export_environment.sh
 ios/Flutter/.last_build_id
@@ -21,6 +27,27 @@ ios/Flutter/ephemeral/
 macos/Flutter/ephemeral/
 linux/flutter/ephemeral/
 windows/flutter/ephemeral/
+*.iws
+*.iml
+.idea/
+.vscode/*
+!.vscode/settings.json
+.DS_Store
+pubspec.lock.bak
+**/GeneratedPluginRegistrant.*
+
+# Firebase / secrets
+lib/firebase_options.dart
+.env
+.env.*
+*.secret
+firebase/functions/node_modules/
+firebase/functions/lib/
+firebase/.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+serviceAccountKey*.json
 
 # Local browser profiles created during UI inspection
 docs/build/chrome-profile*/

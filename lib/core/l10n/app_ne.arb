@@ -369,4 +369,7 @@
   "@duplicateMedicineMessage": {
     "placeholders": {"name": {"type": "String"}}
   }
+  "doseSkip": "छोड्नुहोस्",
+  "doseMarkedTaken": "लिइएको भनी दर्ता भयो",
+  "doseAlreadyLogged": "यो खुराक पहिले नै दर्ता छ"
 }
