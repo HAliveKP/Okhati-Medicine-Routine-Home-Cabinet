@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:okhati/features/history/domain/models/dose_log.dart';
-import 'package:okhati/features/history/domain/repositories/history_repository.dart';
+import 'package:okhati/features/history/domain/repositories/dose_history_repository.dart';
 import 'package:okhati/features/history/presentation/history_provider.dart';
 import 'package:okhati/features/history/presentation/history_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:okhati/l10n/app_localizations.dart';
 
-class MockHistoryRepository implements HistoryRepository {
+class MockHistoryRepository implements DoseHistoryRepository {
   @override
   Future<List<DoseLog>> getDoseLogs(String profileId, DateTime startDate, DateTime endDate) async {
     return [

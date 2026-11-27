@@ -1,13 +1,24 @@
-import 'package:flutter/widgets.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:okhati/app.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+import './app.dart';
+import './features/auth/data/mock_authentication_repository.dart';
+import './features/auth/presentation/viewmodels/auth_view_model.dart';
+import './features/history/data/mock_history_repository.dart';
+import './features/history/presentation/viewmodels/history_view_model.dart';
 
-  // TODO(A, Sprint 1-2): after running `flutterfire configure`, enable:
-  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  // TODO(C, Sprint 4): initialise local notifications + timezone here.
-
-  runApp(const ProviderScope(child: OkhatiApp()));
+void main() {
+  runApp(
+    ProviderScope(
+      overrides: [
+        authRepositoryProvider.overrideWith(
+          (ref) => MockAuthenticationRepository(),
+        ),
+        historyRepositoryProvider.overrideWith(
+          (ref) => MockHistoryRepository(),
+        ),
+      ],
+      child: const OkhatiApp(),
+    ),
+  );
 }

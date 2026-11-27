@@ -1,17 +1,25 @@
-# Flutter / Dart
-.dart_tool/
-.packages
-.pub-cache/
-.pub/
-build/
+# Flutter/Dart
+/.packages
+/.dart_tool/
+/build/
 .flutter-plugins
 .flutter-plugins-dependencies
-pubspec.lock.bak
+/.pub-cache/
+/.pub/
+*.iws
 *.iml
 .idea/
 .vscode/*
 !.vscode/settings.json
 .DS_Store
+pubspec.lock.bak
+
+# Okhati agent kit (agent definitions, skills, docs — not part of the app)
+okhati-agent-kit/
+
+# Generated agent skills / lockfiles
+.agents/
+skills-lock.json
 
 # Android
 android/.gradle/
@@ -28,7 +36,7 @@ ios/.symlinks/
 ios/Flutter/Generated.xcconfig
 ios/GoogleService-Info.plist
 
-# Firebase / secrets (NEVER commit)
+# Firebase / secrets
 lib/firebase_options.dart
 .env
 .env.*

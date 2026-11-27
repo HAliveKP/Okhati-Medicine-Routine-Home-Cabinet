@@ -2,13 +2,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:okhati/features/history/data/datasources/history_remote_datasource.dart';
 import 'package:okhati/features/history/data/repositories/history_repository_impl.dart';
 import 'package:okhati/features/history/domain/models/dose_log.dart';
-import 'package:okhati/features/history/domain/repositories/history_repository.dart';
+import 'package:okhati/features/history/domain/repositories/dose_history_repository.dart';
 
 final historyRemoteDatasourceProvider = Provider<HistoryRemoteDatasource>((ref) {
   return HistoryRemoteDatasource();
 });
 
-final historyRepositoryProvider = Provider<HistoryRepository>((ref) {
+final historyRepositoryProvider = Provider<DoseHistoryRepository>((ref) {
   return HistoryRepositoryImpl(
     datasource: ref.watch(historyRemoteDatasourceProvider),
   );

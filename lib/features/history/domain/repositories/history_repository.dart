@@ -1,5 +1,6 @@
-import 'package:okhati/features/history/domain/models/dose_log.dart';
+import '../models/history_entry.dart';
 
 abstract class HistoryRepository {
-  Future<List<DoseLog>> getDoseLogs(String profileId, DateTime startDate, DateTime endDate);
+  Future<List<HistoryEntry>> listEntries();
+  Future<WeeklyStats> loadWeeklyStats();
 }
