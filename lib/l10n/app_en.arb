@@ -12,5 +12,21 @@
   "statusExpired": "Expired",
   "actionTaken": "Taken",
   "actionSnooze": "Snooze",
-  "aiDisclaimer": "AI can make mistakes. This app does not give medical advice."
+  "aiDisclaimer": "AI can make mistakes. This app does not give medical advice.",
+  "historyTitle": "History",
+  "exportPdf": "Export PDF",
+  "selectDateRange": "Select Date Range",
+  "noLogsInRange": "No dose logs found in selected date range.",
+  "pdfTitle": "Dose History Report",
+  "profileLabel": "Profile",
+  "dateRangeLabel": "Date Range",
+  "adherenceLabel": "Adherence",
+  "tableDate": "Date",
+  "tableTime": "Time",
+  "tableMedicine": "Medicine",
+  "tableStatus": "Status",
+  "statusTaken": "Taken",
+  "statusMissed": "Missed",
+  "statusSkipped": "Skipped",
+  "pdfFooter": "Recorded data only, not medical advice"
 }

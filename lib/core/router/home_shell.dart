@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:okhati/features/dashboard/presentation/today_dashboard.dart';
 import 'package:okhati/l10n/app_localizations.dart';
 
 /// Max 4 tabs: Today, Cabinet, Family, More.
@@ -15,14 +14,13 @@ class _HomeShellState extends State<HomeShell> {
 
   @override
   Widget build(BuildContext context) {
-    final t = AppLocalizations.of(context);
+    final t = AppLocalizations.of(context)!;
     final titles = [t.tabToday, t.tabCabinet, t.tabFamily, t.tabMore];
 
     return Scaffold(
       appBar: AppBar(title: Text(titles[_index])),
-      body: _index == 0
-          ? const TodayDashboard()
-          : Center(child: Text(titles[_index])),
+      // TODO: replace placeholders with feature presentation screens.
+      body: Center(child: Text(titles[_index])),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _index,
         onDestinationSelected: (i) => setState(() => _index = i),
